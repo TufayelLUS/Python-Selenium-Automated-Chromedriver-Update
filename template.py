@@ -9,7 +9,8 @@ from selenium.webdriver.chrome.service import Service
 import platform
 from zipfile import ZipFile
 import shutil
-import undetected_chromedriver as uc
+import undetected_chromedriver as UC
+import traceback
 
 
 def getLatestStableVersion():
@@ -113,6 +114,7 @@ if __name__ == "__main__":
             driver = createBrowser()
             break
         except:
+            traceback.print_exc()
             downloadLatestChromedriver()
             print("Download completed")
     # now use the browser variable for opening any website
