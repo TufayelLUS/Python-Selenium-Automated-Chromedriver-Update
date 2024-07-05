@@ -47,7 +47,7 @@ def downloadLatestChromedriver():
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36'
     }
-    print("Downloading latest stable version of chromedriver, please wait ...")
+    print("Downloading latest stable version of chromedriver, please wait (also update google chrome if there is any update available) ...")
     try:
         resp = requests.get(driver_link, headers=headers).content
     except:
