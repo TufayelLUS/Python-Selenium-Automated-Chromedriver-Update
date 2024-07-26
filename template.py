@@ -11,6 +11,7 @@ from zipfile import ZipFile
 import shutil
 import undetected_chromedriver as UC
 import traceback
+import requests
 
 
 def getLatestStableVersion():
