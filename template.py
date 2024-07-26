@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 import platform
 from zipfile import ZipFile
 import shutil
-import undetected_chromedriver as UC
+import undetected_chromedriver as uc
 import traceback
 import requests
 
