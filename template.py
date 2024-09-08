@@ -102,7 +102,12 @@ def createBrowser():
     # chrome_options.add_argument("--proxy-server=socks5://{}:{}".format(PROXY_HOST, PROXY_PORT))
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--log-level=3")
-    service = Service(executable_path="chromedriver.exe")
+    if platform.system() == "Windows":
+        service = Service(executable_path="chromedriver.exe")
+    elif platform.system() == "Linux":
+        service = Service(executable_path="chromedriver")
+    elif platform.system() == "Darwin":
+        service = Service(executable_path="chromedriver")
     driver = uc.Chrome(service=service, options=chrome_options)
     # driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.maximize_window()
